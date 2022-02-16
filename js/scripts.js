@@ -1,23 +1,49 @@
-const toogleTheme = document.getElementById('toogle-theme')
-const toogleIcon = document.getElementById('toogle-icon')
-const toogleText = document.getElementById('toogle-text')
+const toggleTheme = document.getElementById('toogle-theme');
+const toggleIcon = document.getElementById('toogle-icon');
+const toggleText = document.getElementById('toogle-text');
+const toggleColor = document.getElementById('toogle-color');
 
-const toogleColor = document.getElementById('toogle-color')
-const rootStyle = document.documentElement.style 
+const buttons = document.getElementById('buttons');
+const textsToChange = document.querySelectorAll('[data-section]');
+const footerCopy = document.getElementById('footer-copy');
 
-toogleTheme.addEventListener('click', () =>{
-    document.body.classList.toggle('dark')
-    if(toogleIcon.classList.contains('fa-moon')){
-        toogleIcon.classList.replace('fa-moon', 'fa-sun')
-        toogleText.textContent = 'Light Mode'
-    }else{
-        toogleIcon.classList.replace('fa-sun', 'fa-moon')
-        toogleText.textContent = 'Dark Mode'
-    }
-})
+const rootStyles = document.documentElement.style;
 
-toogleColor.addEventListener('click', (e) =>{
-    if(e.target.classList.contains('colors__item')){
-        rootStyle.setProperty('--primary-color', e.target.dataset.color)
-    }
-})
+toggleTheme.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  if (toggleIcon.classList.contains('fa-moon')) {
+    toggleIcon.classList.replace('fa-moon', 'fa-sun');
+    toggleText.textContent = 'Light Mode';
+  } else {
+    toggleIcon.classList.replace('fa-sun', 'fa-moon');
+    toggleText.textContent = 'Dark Mode';
+  }
+});
+
+toggleColor.addEventListener('click', e => {
+  if (e.target.classList.contains('colors__item')) {
+    rootStyles.setProperty('--primary-color', e.target.dataset.color);
+  }
+});
+
+const changeLanguage = async language => {
+  const requestJson = await fetch(`./languages/${language}.json`);
+  const texts = await requestJson.json();
+
+  for (const textToChange of textsToChange) {
+    const section = textToChange.dataset.section;
+    const value = textToChange.dataset.value;
+    textToChange.textContent = texts[section][value];
+  }
+};
+
+buttons.addEventListener('click', e => {
+  const language = e.target.dataset.language;
+  if (language) {
+    changeLanguage(language);
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  footerCopy.textContent = `Alfredo Sánchez ${new Date().getFullYear()}`;
+});

@@ -1,67 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cc02037942.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Portfolio</title>
-</head>
-<body class="dark">
-    <!-- TOOGLE COLOR  -->
-    <div class="switches">
+  </head>
+  <body class="dark">
+    <header class="header">
+      <div class="switches">
+        <!-- TOGGLE THEME -->
         <div id="toogle-theme" class="toogle-theme">
-            <i id="toogle-icon" class="far fa-sun toogle-theme__icon"></i>
-            <p id="toogle-text" class="toogle-theme__text">Light Mode</p>
+          <i id="toogle-icon" class="fa fa-sun toogle-theme__icon"></i>
+          <p id="toogle-text" class="toogle-theme__text">Light Mode</p>
         </div>
+
+        <!-- TOGGLE COLOR -->
         <div id="toogle-color" class="colors">
-            <div data-color="hsl(214, 84%, 56%)" class="colors__item colors__item--blue"></div>
-            <div data-color="hsl(150, 84%, 56%)" class="colors__item colors__item--green"></div>
-            <div data-color="hsl(276, 84%, 56%)" class="colors__item colors__item--purple"></div>
-            <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange"></div>
+          <div
+            data-color="hsl(214, 84%, 56%)"
+            class="colors__item colors__item--blue"
+          ></div>
+          <div
+            data-color="hsl(150, 84%, 56%)"
+            class="colors__item colors__item--green"
+          ></div>
+          <div
+            data-color="hsl(276, 84%, 56%)"
+            class="colors__item colors__item--purple"
+          ></div>
+          <div
+            data-color="hsl(46, 84%, 56%)"
+            class="colors__item colors__item--orange"
+          ></div>
+          <div id="buttons">
+            <button data-language="en">Inglés</button>
+            <button data-language="es">Español</button>
+          </div>
         </div>
-    </div>
-    <!-- CARD PROFILE  -->
-    <div class="card-profile">
-        <div class="card-profile__image-container">
-            <img src="assets/images/profile.jpg" alt="profile" class="card-profile__image">
-        </div>
-        <h2 class="title">Alfredo Sánchez</h2>
-        <p class="subtitle">Full Stack Js developer </p>
-        <div class="card-profile__info">
-            <div class="email">
-                <i class="fas fa-solid fa-envelope icon"></i>
-                <a href="mailto:alfredosanchez080114@gmail.com">alfredosanchez@gmail.com</a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="column column--left">
+        <!-- PROFILE CARD -->
+        <div class="card card--profile">
+          <div class="card__image-container">
+            <img
+              src="assets/images/profile.jpeg"
+              alt="profile"
+              class="card__image"
+            />
+          </div>
+          <div class="card__header">
+            <h2 class="card__title no-margin">Alfredo Sanchez</h2>
+            <p class="card__subtitle" data-section="profile" data-value="rol">
+              Front-end developer
+            </p>
+          </div>
+          <div class="card__body">
+            <div class="card__link">
+              <i class="fas fa-envelope icon"></i>
+              <a href="mailto:doriandesings@gmail.com"
+                >alfredosanchez@gmail.com</a
+              >
             </div>
-            <div class="phone">
-                <i class="fas fa-phone-alt icon"></i>
-                <a href="tel:+59584580307">0984-580-307</a>
+            <div class="card__link">
+              <i class="fas fa-phone-alt icon"></i>
+              <a href="tel:+34123456789">123456789</a>
             </div>
+            <p
+              class="card__text"
+              data-section="profile"
+              data-value="description"
+            >
+              Más de 3 años de experiencia en desarrollo web. Apasionado de las
+              nuevas tecnologías y en especial del ecosistema de CSS y
+              JavaScript. <br />
+              Mi propósito es trasladar mi pasión por tecnologías web a
+              todos aquellos que quieran iniciarse en este campo de una forma
+              actualizada, con buenas prácticas y desde cero.
+            </p>
+          </div>
         </div>
-        <div class="card-profile__description">
-            Desarrollo de software a medida. Convertimos tus sueños en realidad.
+
+        <div class="card card--experience">
+          <h2 class="card__title">Experiences</h2>
+          <div class="experience">
+            <img
+              src="assets/images/cofudep-logo.png"
+              alt="logo"
+              class="experience__image"
+            />
+            <div class="experience__info">
+              <p
+                class="experience__time"
+                data-section="experience"
+                data-value="last-job-dates"
+              >
+                Dic 2018 - Current
+              </p>
+              <h3
+                class="experience__job"
+                data-section="experience"
+                data-value="last-job-title"
+              >
+                Front-end developer
+              </h3>
+              <p
+                class="experience__description"
+                data-section="experience"
+                data-value="last-job-description"
+              >
+                Creación, desarrollo y mantenimiento de funcionalidades requeridas para el funcionamiento del sistema informático interno.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="experience">
+            <img
+              src="assets/images/logo.png"
+              alt="logo"
+              class="experience__image"
+            />
+            <div class="experience__info">
+              <p
+                class="experience__time"
+                data-section="experience"
+                data-value="second-job-dates"
+              >
+                Feb 2017 - Current
+              </p>
+              <h3
+                class="experience__job"
+                data-section="experience"
+                data-value="second-job-title"
+              >
+                Front-end developer
+              </h3>
+              <p
+                class="experience__description"
+                data-section="experience"
+                data-value="second-job-description"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </div>
+          </div> -->
+          <div class="experience">
+            <img
+              src="assets/images/logo.png"
+              alt="logo"
+              class="experience__image"
+            />
+            <div class="experience__info">
+              <p
+                class="experience__time"
+                data-section="experience"
+                data-value="first-job-dates"
+              >
+                Feb 2017
+              </p>
+              <h3
+                class="experience__job"
+                data-section="experience"
+                data-value="first-job-title"
+              >
+                Auxiliar IT
+              </h3>
+              <p
+                class="experience__description"
+                data-section="experience"
+                data-value="first-job-description"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Skills -->
-    <div id="skills" class="skills">
-        <h2 class="skills__title">Front End</h2>
-        <div class="skills__item">
-            <p class="skills__tech">HTML</p>
-            <div class="skills__bar skills__bar--50"></div>
+        <div class="card card--hobbies">
+          <h2 class="card__title">Hobbies</h2>
+          <div class="hobbie">
+            <div class="card__image-container">
+              <img src="assets/images/Hobbie.jpeg" alt="" class="card__image" />
+            </div>
+            <h3 class="hobbie__title">Biking on the mountains</h3>
+            <p class="card__text">
+              I love going out for a bike ride feeling the wind and the fresh
+              air on my face
+            </p>
+          </div>
         </div>
-        <div class="skills__item">
-            <p class="skills__tech">CSS</p>
-            <div class="skills__bar skills__bar--60"></div>
+      </section>
+      <section class="column column--right">
+        <div class="card">
+          <h2 class="card__title no-margin">Front End</h2>
+          <small>Años de experiencia</small>
+          <div class="skills">
+            <div class="skills__header">
+              <span class="skills__start-label">0</span>
+              <span class="skills__end-label">5</span>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">HTML</p>
+              <div class="skills__bar skills__bar--50"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">CSS</p>
+              <div class="skills__bar skills__bar--90"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">JavaScript</p>
+              <div class="skills__bar skills__bar--70"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">PHP</p>
+              <div class="skills__bar skills__bar--30"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">React</p>
+              <div class="skills__bar skills__bar--60"></div>
+            </div>
+          </div>
         </div>
-        <div class="skills__item">
-            <p class="skills__tech">JavaScript</p>
-            <div class="skills__bar skills__bar--90"></div>
+        <div class="card">
+          <h2 class="card__title no-margin">Design</h2>
+          <div class="skills">
+            <div class="skills__item">
+              <p class="skills__tech">Photshop</p>
+              <div class="skills__bar skills__bar--50"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">Illustrator</p>
+              <div class="skills__bar skills__bar--90"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">Figma</p>
+              <div class="skills__bar skills__bar--70"></div>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="card">
+          <h2 class="card__title no-margin">Multimedia</h2>
+          <div class="skills">
+            <div class="skills__item">
+              <p class="skills__tech">After Effects</p>
+              <div class="skills__bar skills__bar--80"></div>
+            </div>
+            <div class="skills__item">
+              <p class="skills__tech">Premiere</p>
+              <div class="skills__bar skills__bar--90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card card--project">
+          <div class="card__image-container">
+            <img
+              src="assets/images/project.jpg"
+              alt="Landing page project"
+              class="card__image"
+            />
+          </div>
+          <div class="project">
+            <div class="project__tags">
+              <span class="project__tag">#HTML</span>
+              <span class="project__tag">#CSS</span>
+              <span class="project__tag">#JavaScript</span>
+              <span class="project__tag">#Responsive</span>
+            </div>
+
+            <h2 class="card__title no-margin">Landing Page</h2>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              at quae totam, distinctio tempora, numquam sint delectus
+              consequuntur sequi quam sed quis exercitationem temporibus.
+            </p>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              harum nam ducimus dignissimos, molestias quas. Natus quis, aliquid
+              iste, voluptate animi blanditiis quia adipisci laboriosam non
+              minus suscipit incidunt ab.
+            </p>
+            <div class="buttons">
+              <a href="#" class="button button--primary">Demo</a>
+              <a href="#" class="button button--ghost">Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="card card--project">
+          <div class="card__image-container">
+            <img
+              src="assets/images/project.jpg"
+              alt="Landing page project"
+              class="card__image"
+            />
+          </div>
+          <div class="project">
+            <div class="project__tags">
+              <span class="project__tag">#HTML</span>
+              <span class="project__tag">#CSS</span>
+              <span class="project__tag">#JavaScript</span>
+              <span class="project__tag">#Responsive</span>
+            </div>
+
+            <h2 class="card__title no-margin">Landing Page</h2>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              at quae totam, distinctio tempora, numquam sint delectus
+              consequuntur sequi quam sed quis exercitationem temporibus.
+            </p>
+            <p class="card__text card__text--hide-in-mobile">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              harum nam ducimus dignissimos, molestias quas. Natus quis, aliquid
+              iste, voluptate animi blanditiis quia adipisci laboriosam non
+              minus suscipit incidunt ab.
+            </p>
+            <div class="buttons">
+              <a href="#" class="button button--primary">Demo</a>
+              <a href="#" class="button button--ghost">Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="card card--project">
+          <div class="card__image-container">
+            <img
+              src="assets/images/project.jpg"
+              alt="Landing page project"
+              class="card__image"
+            />
+          </div>
+          <div class="project">
+            <div class="project__tags">
+              <span class="project__tag">#HTML</span>
+              <span class="project__tag">#CSS</span>
+              <span class="project__tag">#JavaScript</span>
+              <span class="project__tag">#Responsive</span>
+            </div>
+
+            <h2 class="card__title no-margin">Landing Page</h2>
+            <p class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              at quae totam, distinctio tempora, numquam sint delectus
+              consequuntur sequi quam sed quis exercitationem temporibus.
+            </p>
+            <p class="card__text card__text--hide-in-mobile">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              harum nam ducimus dignissimos, molestias quas. Natus quis, aliquid
+              iste, voluptate animi blanditiis quia adipisci laboriosam non
+              minus suscipit incidunt ab.
+            </p>
+            <div class="buttons">
+              <a href="#" class="button button--primary">Demo</a>
+              <a href="#" class="button button--ghost">Code</a>
+            </div>
+          </div>
+        </div>
+        <footer class="card footer">
+          <p id="footer-copy" class="footer__copy">AlfredoSanchez</p>
+          <ul class="social-links">
+            <li class="social-links__item">
+              <i class="fa fa-twitter"></i>
+            </li>
+            <li class="social-links__item">
+              <i class="fa fa-facebook"></i>
+            </li>
+            <li class="social-links__item">
+              <i class="fa fa-youtube"></i>
+            </li>
+            <li class="social-links__item">
+              <i class="fa fa-linkedin"></i>
+            </li>
+            <li class="social-links__item">
+              <i class="fa fa-github"></i>
+            </li>
+            <li class="social-links__item">
+              <i class="fa fa-twitch"></i>
+            </li>
+          </ul>
+        </footer>
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/a0ab449b77.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>
