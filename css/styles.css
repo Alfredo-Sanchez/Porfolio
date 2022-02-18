@@ -208,6 +208,7 @@
       display: grid;
       grid-template-columns: min-content 1fr;
       grid-column: 1 / -1;
+      min-height: 350px;
     }
   }
   
