@@ -419,7 +419,7 @@
 
   .social-links__link{
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
   }
   
   .icon {
