@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "rol": "Front-end developer",
+    "description": "More than 3 years of experience in web development. Passionate about new technologies and especially the CSS and JavaScript ecosystem. My purpose is to transfer my passion for web technologies to all those who want to start in this field in an updated way, with good practices and from scratch."
+  },
+  "experience": {
+    "experience-title": "Experiences",
+    "first-job-title": "Auxilliar IT",
+    "first-job-dates": "Jan 2017 - Jun 2017",
+    "first-job-description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    "last-job-title": "Front-end Developer",
+    "last-job-dates": "Dec 2018 - Current",
+    "last-job-description": "Creation, development and maintenance of functionalities required for the operation of the internal computer system."
+  },
+  "hobbie": {
+    "hobbie-title": "Hobbies",
+    "hobbie-title-desc": "Climb mountains",
+    "hobbie-description": "I love to know places with a beautiful nature"
+  }
+}

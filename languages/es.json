@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "rol": "Desarrollador Front-end",
+    "description": "Más de 3 años de experiencia en desarrollo web. Apasionado de las nuevas tecnologías y en especial del ecosistema de CSS y JavaScript. Mi propósito es trasladar mi pasión por tecnologías web a todos aquellos que quieran iniciarse en este campo de una forma actualizada, con buenas prácticas y desde cero."
+  },
+  "experience": {
+    "experience-title": "Experiencias",
+    "first-job-title": "Auxiliar IT",
+    "first-job-dates": "Ene 2017 - Jun 2017",
+    "first-job-description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    "last-job-title": "Desarrollador Front-end",
+    "last-job-dates": "Dic 2018 - Actualmente",
+    "last-job-description": "Creación, desarrollo y mantenimiento de funcionalidades requeridas para el funcionamiento del sistema informático interno."
+  },
+  "hobbie": {
+    "hobbie-title": "Pasatiempos",
+    "hobbie-title-desc": "Subir Montañas",
+    "hobbie-title-description": "Me encanta conocer lugares con una hermosa naturaleza"
+  }
+}
